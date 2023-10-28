@@ -1,10 +1,10 @@
-package com.sena.caprenizaje;
+package com.sena.caprendizaje;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CaprenizajeApplicationTests {
+class CaprendizajeApplicationTests {
 
 	@Test
 	void contextLoads() {

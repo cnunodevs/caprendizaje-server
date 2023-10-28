@@ -1,4 +1,4 @@
-package com.sena.caprenizaje.infrastructure.cloud.storage.model;
+package com.sena.caprendizaje.infrastructure.cloud.storage.model;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.sena.caprenizaje.infrastructure.cloud.configuration;
+package com.sena.caprendizaje.infrastructure.cloud.configuration;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.AWSCredentialsProvider;

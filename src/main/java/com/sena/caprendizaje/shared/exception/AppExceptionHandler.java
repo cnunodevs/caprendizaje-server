@@ -1,4 +1,4 @@
-package com.sena.caprenizaje.shared.exception;
+package com.sena.caprendizaje.shared.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.sena.caprenizaje.shared.message.Message;
-import com.sena.caprenizaje.shared.response.ResponseManager;
-import com.sena.caprenizaje.shared.response.StandardResponse;
+import com.sena.caprendizaje.shared.message.Message;
+import com.sena.caprendizaje.shared.response.ResponseManager;
+import com.sena.caprendizaje.shared.response.StandardResponse;
 
 import lombok.RequiredArgsConstructor;
 

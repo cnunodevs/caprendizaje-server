@@ -1,4 +1,4 @@
-package com.sena.caprenizaje.infrastructure.cloud.storage.service.adapter;
+package com.sena.caprendizaje.infrastructure.cloud.storage.service.adapter;
 
 import java.io.File;
 import java.io.InputStream;
@@ -13,8 +13,8 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
-import com.sena.caprenizaje.infrastructure.cloud.storage.model.FileResult;
-import com.sena.caprenizaje.infrastructure.cloud.storage.service.port.CloudStorageServiceProvider;
+import com.sena.caprendizaje.infrastructure.cloud.storage.model.FileResult;
+import com.sena.caprendizaje.infrastructure.cloud.storage.service.port.CloudStorageServiceProvider;
 
 import lombok.RequiredArgsConstructor;
 

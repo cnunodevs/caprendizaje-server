@@ -1,4 +1,4 @@
-package com.sena.caprenizaje.shared.message;
+package com.sena.caprendizaje.shared.message;
 
 public class Message {
 

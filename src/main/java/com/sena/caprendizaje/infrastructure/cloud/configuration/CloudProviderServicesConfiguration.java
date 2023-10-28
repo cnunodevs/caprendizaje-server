@@ -1,4 +1,4 @@
-package com.sena.caprenizaje.infrastructure.cloud.configuration;
+package com.sena.caprendizaje.infrastructure.cloud.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

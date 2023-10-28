@@ -1,13 +1,13 @@
-package com.sena.caprenizaje;
+package com.sena.caprendizaje;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CaprenizajeApplication {
+public class CaprendizajeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CaprenizajeApplication.class, args);
+		SpringApplication.run(CaprendizajeApplication.class, args);
 	}
 
 }

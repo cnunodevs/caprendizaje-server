@@ -1,4 +1,4 @@
-package com.sena.caprenizaje.shared.response;
+package com.sena.caprendizaje.shared.response;
 
 import java.time.LocalDateTime;
 

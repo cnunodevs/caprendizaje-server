@@ -1,4 +1,4 @@
-package com.sena.caprenizaje.shared.constant;
+package com.sena.caprendizaje.shared.constant;
 
 public class RestConstant {
 

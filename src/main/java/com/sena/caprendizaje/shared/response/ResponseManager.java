@@ -1,8 +1,8 @@
-package com.sena.caprenizaje.shared.response;
+package com.sena.caprendizaje.shared.response;
 
 import java.time.LocalDateTime;
 
-import com.sena.caprenizaje.shared.message.Message;
+import com.sena.caprendizaje.shared.message.Message;
 
 public interface ResponseManager {
 

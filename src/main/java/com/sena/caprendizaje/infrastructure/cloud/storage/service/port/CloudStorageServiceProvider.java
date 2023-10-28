@@ -1,9 +1,9 @@
-package com.sena.caprenizaje.infrastructure.cloud.storage.service.port;
+package com.sena.caprendizaje.infrastructure.cloud.storage.service.port;
 
 import java.io.File;
 import java.io.InputStream;
 
-import com.sena.caprenizaje.infrastructure.cloud.storage.model.FileResult;
+import com.sena.caprendizaje.infrastructure.cloud.storage.model.FileResult;
 
 public interface CloudStorageServiceProvider {
 
