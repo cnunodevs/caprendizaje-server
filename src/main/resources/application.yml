@@ -3,3 +3,10 @@ server:
 spring:
     application:
         name: caprendizaje-microservice
+cloud:
+    aws:
+        credentials:
+            access-key: access-key
+            secret-key: secret-key
+        s3:
+            bucket: bucket
