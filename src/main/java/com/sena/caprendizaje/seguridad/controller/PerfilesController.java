@@ -1,4 +1,4 @@
-package com.sena.caprendizaje.aprendizaje.controller;
+package com.sena.caprendizaje.seguridad.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,8 +8,8 @@ import com.sena.caprendizaje.shared.constant.RestConstant;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping(RestConstant.Versioning.API_VERSION_1 + "/" + RestConstant.APPLICATION_NAME + "/" + RestConstant.Resources.VACANT_RESOURCE)
+@RequestMapping(RestConstant.Versioning.API_VERSION_1 + "/" + RestConstant.APPLICATION_NAME + "/" + RestConstant.Resources.PROFILE_RESOURCE)
 @RequiredArgsConstructor
-public class VacantesController {
+public class PerfilesController {
     
 }

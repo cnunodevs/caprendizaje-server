@@ -1,4 +1,4 @@
-package com.sena.caprendizaje.aprendizaje.controller;
+package com.sena.caprendizaje.seguridad.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
