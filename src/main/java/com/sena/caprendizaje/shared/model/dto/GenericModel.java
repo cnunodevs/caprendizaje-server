@@ -1,5 +1,7 @@
 package com.sena.caprendizaje.shared.model.dto;
 
-public interface GenericModel {
+import java.io.Serializable;
+
+public interface GenericModel extends Serializable {
     
 }

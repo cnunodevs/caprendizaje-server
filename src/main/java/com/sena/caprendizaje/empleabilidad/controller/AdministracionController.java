@@ -1,4 +1,4 @@
-package com.sena.caprendizaje.administracion.controller;
+package com.sena.caprendizaje.empleabilidad.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

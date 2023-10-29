@@ -1,5 +1,7 @@
 package com.sena.caprendizaje.shared.model.entity;
 
-public interface GenericEntity {
+import java.io.Serializable;
+
+public interface GenericEntity extends Serializable {
     
 }

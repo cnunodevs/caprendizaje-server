@@ -11,10 +11,10 @@ public class RestConstant {
     public static class Resources {
         public static final String AUTH_RESOURCE = "auth";
         public static final String VACANT_RESOURCE = "vacant";
+        public static final String USERS_RESOURCE = "users";
         public static final String PROFILE_RESOURCE = "profile";
         public static final String MANAGEMENT_RESOURCE = "management";
         public static final String POSTULATION_RESOURCE = "postulation";
-        public static final String PERMISSIONS_RESOURCE = "permissions";
     }
     
 }
