@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.sena.caprendizaje.shared.model.entity.GenericEntity;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor @NoArgsConstructor
 @Table(name = "archivos", schema = "public")
-public class Archivo {
+public class Archivo implements GenericEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
