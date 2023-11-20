@@ -11,14 +11,14 @@ public class ArchivoMapper implements GenericMapper<ArchivoModel, Archivo> {
 
     @Override
     public ArchivoModel mapToModel(Archivo entity) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mapToModel'");
+        return ArchivoModel.builder().id(entity.getId()).path(entity.getPath()).nombre(entity.getNombre())
+                .extension(entity.getExtension()).build();
     }
 
     @Override
     public Archivo mapToEntity(ArchivoModel model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mapToEntity'");
+        return Archivo.builder().id(model.getId()).path(model.getPath()).nombre(model.getNombre())
+                .extension(model.getExtension()).build();
     }
-    
+
 }
