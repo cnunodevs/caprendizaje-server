@@ -11,14 +11,14 @@ public class PerfilMapper implements GenericMapper<PerfilModel, Perfil> {
 
     @Override
     public PerfilModel mapToModel(Perfil entity) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mapToModel'");
+        return PerfilModel.builder().id(entity.getId()).nombre(entity.getNombre()).codigo(entity.getCodigo())
+                .desripcion(entity.getDesripcion()).activo(entity.getActivo()).build();
     }
 
     @Override
     public Perfil mapToEntity(PerfilModel model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mapToEntity'");
+        return Perfil.builder().id(model.getId()).nombre(model.getNombre()).codigo(model.getCodigo())
+                .desripcion(model.getDesripcion()).activo(model.getActivo()).build();
     }
-    
+
 }
