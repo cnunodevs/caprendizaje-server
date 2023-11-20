@@ -15,6 +15,7 @@ public class RestConstant {
         public static final String PROFILE_RESOURCE = "profiles";
         public static final String MANAGEMENT_RESOURCE = "management";
         public static final String POSTULATION_RESOURCE = "postulations";
+        public static final String UPLOAD_RESOURCE = "file";
     }
     
 }
