@@ -46,7 +46,8 @@ public class DataPersonal implements GenericEntity {
     @JoinColumn(name = "tipo_documento")
     private Parametro tipoDocumento;
 
-    private String curriculum;
+    @ManyToOne
+    @JoinColumn(name = "curriculum")
+    private Archivo curriculum;
 
-    
 }
