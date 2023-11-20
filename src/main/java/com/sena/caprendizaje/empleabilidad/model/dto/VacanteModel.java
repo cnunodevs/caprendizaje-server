@@ -1,9 +1,6 @@
 package com.sena.caprendizaje.empleabilidad.model.dto;
 
-import com.sena.caprendizaje.empleabilidad.persistence.entity.Empresa;
-import com.sena.caprendizaje.empleabilidad.persistence.entity.Parametro;
 import com.sena.caprendizaje.shared.model.dto.GenericModel;
-
 
 import lombok.Builder;
 import lombok.Data;
@@ -16,15 +13,15 @@ public class VacanteModel implements GenericModel {
 
     private Double salario;
     
-    private Parametro moneda;
+    private ParametroModel moneda;
 
-    private Empresa empresa;
+    private EmpresaModel empresa;
 
-    private Parametro ciudad;
+    private ParametroModel ciudad;
 
-    private Parametro modalidad;
+    private ParametroModel modalidad;
 
-    private Parametro categoria;
+    private ParametroModel categoria;
 
     private Boolean activo;
     
