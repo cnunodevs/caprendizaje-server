@@ -1,9 +1,5 @@
 package com.sena.caprendizaje.empleabilidad.persistence.entity;
 
-import java.time.LocalDateTime;
-
-import org.hibernate.annotations.CreationTimestamp;
-
 import com.sena.caprendizaje.shared.model.entity.GenericEntity;
 
 import jakarta.persistence.Column;
@@ -43,9 +39,5 @@ public class Postulacion implements GenericEntity {
 
     @Column(name = "activa")
     private boolean activa;
-
-    @CreationTimestamp
-    @Column(name = "fecha_creacion")
-    private LocalDateTime fechaCreacion;
     
 }

@@ -1,9 +1,5 @@
 package com.sena.caprendizaje.empleabilidad.persistence.entity;
 
-import java.time.LocalDateTime;
-
-import org.hibernate.annotations.CreationTimestamp;
-
 import com.sena.caprendizaje.shared.model.entity.GenericEntity;
 
 import jakarta.persistence.Column;
@@ -44,9 +40,5 @@ public class Empresa implements GenericEntity {
     @ManyToOne
     @JoinColumn(name = "foto_perfil")
     private Archivo fotoPerfil;
-
-    @CreationTimestamp
-    @Column(name = "fecha_creacion")
-    private LocalDateTime fechaCreacion;
     
 }
