@@ -1,11 +1,18 @@
 package com.sena.caprendizaje.empleabilidad.persistence.entity;
 
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+
 import com.sena.caprendizaje.shared.model.entity.GenericEntity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,5 +29,23 @@ public class Postulacion implements GenericEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "postulacion")
+    private Postulacion postulacion;
+
+    @ManyToOne
+    @JoinColumn(name = "vacante")
+    private Vacante vacante;
+
+    @Column(name = "estado")
+    private Parametro estado;
+
+    @Column(name = "activa")
+    private boolean activa;
+
+    @CreationTimestamp
+    @Column(name = "fecha_creacion")
+    private LocalDateTime fechaCreacion;
     
 }
