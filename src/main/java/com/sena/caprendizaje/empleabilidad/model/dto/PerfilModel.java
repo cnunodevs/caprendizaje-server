@@ -8,5 +8,15 @@ import lombok.Data;
 @Data
 @Builder
 public class PerfilModel implements GenericModel {
+
+    private Long id;
+
+    private String nombre;
+
+    private String desripcion;
+
+    private String codigo;
+
+    private Boolean activo;
     
 }

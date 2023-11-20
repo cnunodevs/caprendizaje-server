@@ -50,6 +50,6 @@ public class Vacante implements GenericEntity {
     private Parametro categoria;
 
     @Column(name = "activo")
-    private boolean activo;
+    private Boolean activo;
     
 }

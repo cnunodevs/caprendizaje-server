@@ -34,6 +34,6 @@ public class Perfil implements GenericEntity {
     private String codigo;
 
     @Column(name = "activo")
-    private boolean activo;
+    private Boolean activo;
     
 }

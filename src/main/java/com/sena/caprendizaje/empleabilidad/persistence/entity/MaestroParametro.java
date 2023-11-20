@@ -31,6 +31,6 @@ public class MaestroParametro implements GenericEntity {
     private String codigo;
 
     @Column(name = "activo")
-    private boolean activo;
+    private Boolean activo;
     
 }

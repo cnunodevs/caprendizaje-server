@@ -38,6 +38,6 @@ public class Postulacion implements GenericEntity {
     private Parametro estado;
 
     @Column(name = "activa")
-    private boolean activa;
+    private Boolean activa;
     
 }

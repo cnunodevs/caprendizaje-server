@@ -8,5 +8,13 @@ import lombok.Data;
 @Data
 @Builder
 public class MaestroParametroModel implements GenericModel {
+
+    private Long id;
+
+    private String nombre;
+
+    private String codigo;
+
+    private Boolean activo;
     
 }

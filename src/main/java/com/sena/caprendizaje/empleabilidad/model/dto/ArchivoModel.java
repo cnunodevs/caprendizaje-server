@@ -8,5 +8,13 @@ import lombok.Data;
 @Data
 @Builder
 public class ArchivoModel implements GenericModel {
+
+    private Long id;
+
+    private String path;
+
+    private String nombre;
+
+    private String extension;
     
 }

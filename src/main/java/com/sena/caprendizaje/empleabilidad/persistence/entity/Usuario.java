@@ -41,7 +41,7 @@ public class Usuario implements GenericEntity {
     private Perfil perfil;
 
     @Column(name = "activo")
-    private boolean activo;
+    private Boolean activo;
 
 
 }
