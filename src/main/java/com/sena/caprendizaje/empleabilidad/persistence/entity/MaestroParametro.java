@@ -2,6 +2,7 @@ package com.sena.caprendizaje.empleabilidad.persistence.entity;
 
 import com.sena.caprendizaje.shared.model.entity.GenericEntity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,5 +23,14 @@ public class MaestroParametro implements GenericEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "codigo")
+    private String codigo;
+
+    @Column(name = "activo")
+    private boolean activo;
     
 }
