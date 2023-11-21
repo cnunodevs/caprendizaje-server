@@ -6,19 +6,31 @@ import com.sena.caprendizaje.empleabilidad.model.dto.UsuarioModel;
 import com.sena.caprendizaje.empleabilidad.persistence.entity.Usuario;
 import com.sena.caprendizaje.shared.model.mapper.GenericMapper;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class UsuarioMapper implements GenericMapper<UsuarioModel, Usuario> {
+
+    private final PerfilMapper perfilMapper;
+    private final DataPersonalMapper dataPersonalMapper;
 
     @Override
     public UsuarioModel mapToModel(Usuario entity) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mapToModel'");
+        return UsuarioModel.builder().activo(entity.getActivo())
+        .datosPersonales(entity.getDatosPersonales() != null ? dataPersonalMapper.mapToModel(entity.getDatosPersonales()) : null)
+        .usuario(entity.getUsuario()).id(entity.getId())
+        .perfil(entity.getPerfil() != null ? perfilMapper.mapToModel(entity.getPerfil()) : null)
+        .build();
     }
 
     @Override
     public Usuario mapToEntity(UsuarioModel model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'mapToEntity'");
+        return Usuario.builder().activo(model.getActivo())
+        .datosPersonales(model.getDatosPersonales() != null ? dataPersonalMapper.mapToEntity(model.getDatosPersonales()) : null)
+        .usuario(model.getUsuario()).id(model.getId())
+        .perfil(model.getPerfil() != null ? perfilMapper.mapToEntity(model.getPerfil()) : null)
+        .build();
     }
     
 }

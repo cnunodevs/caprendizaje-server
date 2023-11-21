@@ -27,8 +27,8 @@ public class Postulacion implements GenericEntity {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "postulacion")
-    private Postulacion postulacion;
+    @JoinColumn(name = "usuario")
+    private Usuario usuario;
 
     @ManyToOne
     @JoinColumn(name = "vacante")

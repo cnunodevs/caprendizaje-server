@@ -1,6 +1,5 @@
 package com.sena.caprendizaje.empleabilidad.model.dto;
 
-import com.sena.caprendizaje.empleabilidad.persistence.entity.Vacante;
 import com.sena.caprendizaje.shared.model.dto.GenericModel;
 
 import lombok.Builder;
@@ -12,9 +11,9 @@ public class PostulacionModel implements GenericModel {
 
     private Long id;
 
-    private PostulacionModel postulacion;
+    private UsuarioModel usuario;
 
-    private Vacante vacante;
+    private VacanteModel vacante;
 
     private ParametroModel estado;
 
