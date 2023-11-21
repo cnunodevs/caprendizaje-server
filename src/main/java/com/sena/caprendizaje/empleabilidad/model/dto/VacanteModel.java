@@ -11,6 +11,10 @@ public class VacanteModel implements GenericModel {
 
     private Long id;
 
+    private String nombre;
+
+    private String descripcion;
+
     private Double salario;
     
     private ParametroModel moneda;
