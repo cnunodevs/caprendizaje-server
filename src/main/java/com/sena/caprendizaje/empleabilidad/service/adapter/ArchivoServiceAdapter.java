@@ -9,13 +9,11 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.sena.caprendizaje.empleabilidad.model.dto.ArchivoModel;
 import com.sena.caprendizaje.empleabilidad.model.enums.FileType;
 import com.sena.caprendizaje.empleabilidad.persistence.entity.Archivo;
 import com.sena.caprendizaje.empleabilidad.persistence.repository.port.ArchivosRepository;
 import com.sena.caprendizaje.empleabilidad.service.port.ArchivoServiceProvider;
 import com.sena.caprendizaje.infrastructure.cloud.configuration.CloudEnvProvider;
-import com.sena.caprendizaje.infrastructure.cloud.configuration.PathProvider;
 import com.sena.caprendizaje.infrastructure.cloud.storage.service.adapter.CloudStorageServiceAdapter;
 
 import lombok.RequiredArgsConstructor;
