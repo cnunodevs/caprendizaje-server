@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Builder
 @AllArgsConstructor @NoArgsConstructor
-@Table(name = "maestro_parametro", schema = "public")
+@Table(name = "maestro_parametros", schema = "public")
 public class MaestroParametro implements GenericEntity {
 
     @Id
