@@ -34,7 +34,8 @@ public class Postulacion implements GenericEntity {
     @JoinColumn(name = "vacante")
     private Vacante vacante;
 
-    @Column(name = "estado")
+    @ManyToOne
+    @JoinColumn(name = "estado")
     private Parametro estado;
 
     @Column(name = "activa")
