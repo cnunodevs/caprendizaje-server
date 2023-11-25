@@ -27,7 +27,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping(RestConstant.Versioning.API_VERSION_1 + "/" + RestConstant.APPLICATION_NAME + "/"
-        + RestConstant.Resources.USERS_RESOURCE)
+        + RestConstant.Resources.DATA_PERSONAL)
 @RequiredArgsConstructor
 public class DataPersonalController implements ResponseManager {
 

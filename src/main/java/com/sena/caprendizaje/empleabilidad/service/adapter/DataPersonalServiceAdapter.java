@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.sena.caprendizaje.empleabilidad.model.dto.DataPersonalModel;
 import com.sena.caprendizaje.empleabilidad.model.mapper.DataPersonalMapper;
 import com.sena.caprendizaje.empleabilidad.persistence.entity.DataPersonal;
-import com.sena.caprendizaje.empleabilidad.persistence.repository.port.DataPersonalRepository;
+import com.sena.caprendizaje.empleabilidad.persistence.repository.adapter.jpa.DataPersonalRepository;
 import com.sena.caprendizaje.empleabilidad.service.port.DataPersonalServiceProvider;
 import com.sena.caprendizaje.shared.message.Message;
 

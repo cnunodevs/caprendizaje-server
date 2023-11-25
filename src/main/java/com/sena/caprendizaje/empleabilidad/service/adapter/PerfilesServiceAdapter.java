@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.sena.caprendizaje.empleabilidad.model.dto.PerfilModel;
 import com.sena.caprendizaje.empleabilidad.model.mapper.PerfilMapper;
 import com.sena.caprendizaje.empleabilidad.persistence.entity.Perfil;
-import com.sena.caprendizaje.empleabilidad.persistence.repository.port.PerfilesRepository;
+import com.sena.caprendizaje.empleabilidad.persistence.repository.adapter.jpa.PerfilesRepository;
 import com.sena.caprendizaje.empleabilidad.service.port.PerfilesServiceProvider;
 import com.sena.caprendizaje.shared.message.Message;
 

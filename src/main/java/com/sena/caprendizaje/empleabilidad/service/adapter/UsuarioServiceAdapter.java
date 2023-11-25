@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.sena.caprendizaje.empleabilidad.model.dto.UsuarioModel;
 import com.sena.caprendizaje.empleabilidad.model.mapper.UsuarioMapper;
 import com.sena.caprendizaje.empleabilidad.persistence.entity.Usuario;
-import com.sena.caprendizaje.empleabilidad.persistence.repository.port.UsuariosRepository;
+import com.sena.caprendizaje.empleabilidad.persistence.repository.adapter.jpa.UsuariosRepository;
 import com.sena.caprendizaje.empleabilidad.service.port.UsuarioServiceProvider;
 import com.sena.caprendizaje.shared.message.Message;
 
