@@ -53,11 +53,11 @@ public class DataPersonalController implements ResponseManager {
                 success(dataPersonalServiceProvider.crearDataPersonal(dataPersonalModel), Message.Success.SUCCESS));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<StandardResponse> actualizarDataPersonal(@PathVariable Long id,
-            @RequestBody DataPersonalModel dataPersonalModel) {
+    @PutMapping
+    public ResponseEntity<StandardResponse> actualizarDataPersonal(@RequestBody DataPersonalModel dataPersonalModel) {
         return ResponseEntity.status(HttpStatus.OK).body(success(
-                dataPersonalServiceProvider.editarDataPersonal(id, dataPersonalModel), Message.Success.SUCCESS));
+                dataPersonalServiceProvider.editarDataPersonal(dataPersonalModel.getId(), dataPersonalModel),
+                Message.Success.SUCCESS));
     }
 
     @DeleteMapping("/{id}")
@@ -66,7 +66,8 @@ public class DataPersonalController implements ResponseManager {
         if (eliminar) {
             return ResponseEntity.status(HttpStatus.OK).body(success(new HashMap<>(), Message.Success.SUCCESS));
         }
-        return ResponseEntity.status(HttpStatus.OK).body(failed(new HashMap<>(), Message.Resources.DataPersonal.DATA_PERSONAL_NOT_FOUND));
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(failed(new HashMap<>(), Message.Resources.DataPersonal.DATA_PERSONAL_NOT_FOUND));
     }
 
 }

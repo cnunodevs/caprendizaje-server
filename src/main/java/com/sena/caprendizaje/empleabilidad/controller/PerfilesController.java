@@ -53,11 +53,11 @@ public class PerfilesController implements ResponseManager {
                 .body(success(perfilesServiceProvider.crearPerfil(perfilModel), Message.Success.SUCCESS));
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<StandardResponse> editarPerfilPorId(@RequestBody PerfilModel perfilModel,
-            @PathVariable Long id) {
+    @PutMapping
+    public ResponseEntity<StandardResponse> editarPerfilPorId(@RequestBody PerfilModel perfilModel) {
         return ResponseEntity.status(HttpStatus.OK)
-                .body(success(perfilesServiceProvider.editarPerfilPorId(id, perfilModel), Message.Success.SUCCESS));
+                .body(success(perfilesServiceProvider.editarPerfilPorId(perfilModel.getId(), perfilModel),
+                        Message.Success.SUCCESS));
     }
 
     @DeleteMapping("/{id}")
@@ -66,6 +66,7 @@ public class PerfilesController implements ResponseManager {
         if (eliminado) {
             return ResponseEntity.status(HttpStatus.OK).body(success(new HashMap<>(), Message.Success.SUCCESS));
         }
-        return ResponseEntity.status(HttpStatus.OK).body(failed(new HashMap<>(), Message.Resources.Perfil.PERFIL_NOT_FOUND));
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(failed(new HashMap<>(), Message.Resources.Perfil.PERFIL_NOT_FOUND));
     }
 }
