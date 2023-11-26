@@ -52,7 +52,7 @@ public class ParametrosServiceAdapter implements ParametrosServiceProvider {
     public ParametroModel handleUpdateParametro(ParametroModel model) {
         Optional<Parametro> optional = parametrosRepository.findById(model.getId());
         if (optional.isPresent()) {
-            return parametroMapper.mapToModel(optional.get());
+            return parametroMapper.mapToModel(parametrosRepository.save(parametroMapper.mapToEntity(model)));
         }
         throw new IllegalArgumentException(Message.Resources.Parametro.PARAMETRO_NOT_FOUND);
     }
@@ -67,7 +67,7 @@ public class ParametrosServiceAdapter implements ParametrosServiceProvider {
     public MaestroParametroModel handleUpdateMaestroParametro(MaestroParametroModel model) {
         Optional<MaestroParametro> optional = maestroParametrosRepository.findById(model.getId());
         if (optional.isPresent()) {
-            return maestroParametroMapper.mapToModel(optional.get());
+            return maestroParametroMapper.mapToModel(maestroParametrosRepository.save(maestroParametroMapper.mapToEntity(model)));
         }
         throw new IllegalArgumentException(Message.Resources.MaestroParametro.MAESTRO_PARAMETRO_NOT_FOUND);
     }

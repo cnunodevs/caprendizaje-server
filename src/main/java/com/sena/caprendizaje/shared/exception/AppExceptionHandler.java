@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.sena.caprendizaje.shared.message.Message;
 import com.sena.caprendizaje.shared.response.ResponseManager;
 import com.sena.caprendizaje.shared.response.StandardResponse;
 
@@ -20,7 +19,7 @@ public class AppExceptionHandler implements ResponseManager {
     @ResponseStatus(value = HttpStatus.OK)
     public ResponseEntity<StandardResponse> exception(Exception exception) {
             exception.printStackTrace();
-        return ResponseEntity.status(HttpStatus.OK).body(failed(Message.Fail.SOMETHING_WENT_WRONG));
+        return ResponseEntity.status(HttpStatus.OK).body(failed(exception.getLocalizedMessage()));
     }
-    
+
 }
