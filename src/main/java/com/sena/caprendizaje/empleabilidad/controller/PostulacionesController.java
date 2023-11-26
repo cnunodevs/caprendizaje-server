@@ -1,6 +1,5 @@
 package com.sena.caprendizaje.empleabilidad.controller;
 
-import org.hibernate.mapping.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
