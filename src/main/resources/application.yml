@@ -3,6 +3,21 @@ server:
 spring:
     application:
         name: caprendizaje-microservice
+    data:
+        jpa.repositories.enabled: true
+    datasource:
+        url: jdbc:mysql://srv884.hstgr.io:3306/u681097678_caprendizaje
+        driverClassName: com.mysql.jdbc.Driver
+        username: u681097678_caprendizaje
+        password: Caprendizaje2023
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
 cloud:
     aws:
         credentials:
