@@ -2,49 +2,41 @@ package com.sena.caprendizaje.empleabilidad.persistence.repository.adapter;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Repository;
 
 import com.sena.caprendizaje.empleabilidad.persistence.entity.Vacante;
+import com.sena.caprendizaje.empleabilidad.persistence.repository.adapter.jpa.VacanteRepositoryJpa;
 import com.sena.caprendizaje.empleabilidad.persistence.repository.port.VacantesRepository;
 
+import lombok.RequiredArgsConstructor;
+
 @Repository
+@RequiredArgsConstructor
 public class VacantesRepositoryAdapter implements VacantesRepository {
+
+    private final VacanteRepositoryJpa repositoryJpa;
 
     @Override
     public List<Vacante> handleRetrieveVacantes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleRetrieveVacantes'");
-    }
-
-    @Override
-    public List<Vacante> handleRetrieveVacantesByExample(Vacante model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleRetrieveVacantesByExample'");
-    }
-
-    @Override
-    public Page<Vacante> handleRetrieveVacantesPaginated() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleRetrieveVacantesPaginated'");
+        return repositoryJpa.findAll();
     }
 
     @Override
     public Vacante handleCreateVacante(Vacante model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleCreateVacante'");
+        return repositoryJpa.save(model);
     }
 
     @Override
     public Vacante handleUpdateVacante(Vacante model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleUpdateVacante'");
+        return repositoryJpa.save(model);
     }
 
     @Override
     public Vacante handleAprobarVacante(Vacante model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleAprobarVacante'");
+        if (repositoryJpa.handleAprobarVacante(model.getId()) > 0) {
+            return repositoryJpa.findById(model.getId()).get();
+        }
+        return model;
     }
     
 }

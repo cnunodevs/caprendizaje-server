@@ -2,49 +2,40 @@ package com.sena.caprendizaje.empleabilidad.service.adapter;
 
 import java.util.List;
 
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import com.sena.caprendizaje.empleabilidad.model.dto.VacanteModel;
+import com.sena.caprendizaje.empleabilidad.model.mapper.VacanteMapper;
+import com.sena.caprendizaje.empleabilidad.persistence.repository.port.VacantesRepository;
 import com.sena.caprendizaje.empleabilidad.service.port.VacantesServiceProvider;
 
+import lombok.RequiredArgsConstructor;
+
 @Service
+@RequiredArgsConstructor
 public class VacantesServiceAdapter implements VacantesServiceProvider {
+
+    private final VacantesRepository vacantesRepository;
+    private final VacanteMapper vacanteMapper;
 
     @Override
     public List<VacanteModel> handleRetrieveVacantes() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleRetrieveVacantes'");
-    }
-
-    @Override
-    public List<VacanteModel> handleRetrieveVacantesByExample(VacanteModel model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleRetrieveVacantesByExample'");
-    }
-
-    @Override
-    public Page<VacanteModel> handleRetrieveVacantesPaginated() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleRetrieveVacantesPaginated'");
+        return vacantesRepository.handleRetrieveVacantes().stream().map(v -> vacanteMapper.mapToModel(v)).toList();
     }
 
     @Override
     public VacanteModel handleCreateVacante(VacanteModel model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleCreateVacante'");
+        return vacanteMapper.mapToModel(vacantesRepository.handleCreateVacante(vacanteMapper.mapToEntity(model)));
     }
 
     @Override
     public VacanteModel handleUpdateVacante(VacanteModel model) {
-        // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'handleUpdateVacante'");
     }
 
     @Override
     public VacanteModel handleAprobarVacante(VacanteModel model) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'handleAprobarVacante'");
+        return vacanteMapper.mapToModel(vacantesRepository.handleAprobarVacante(vacanteMapper.mapToEntity(model))); 
     }
     
 }
