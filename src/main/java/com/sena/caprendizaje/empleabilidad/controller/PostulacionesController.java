@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,7 +35,7 @@ public class PostulacionesController implements ResponseManager {
         return ResponseEntity.status(HttpStatus.CREATED).body(success(postulacionServiceProvider.handleCreatePostulacion(model), Message.Success.SUCCESS_PROCESS));
     }
 
-    @PostMapping
+    @PutMapping
     public ResponseEntity<StandardResponse> handleUpdatePostulacion(@RequestBody PostulacionModel model) {
         return ResponseEntity.status(HttpStatus.OK).body(success(postulacionServiceProvider.handleUpdatePostulacion(model), Message.Success.SUCCESS_PROCESS));
     }

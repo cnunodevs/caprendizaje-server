@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import com.sena.caprendizaje.empleabilidad.model.dto.PostulacionFilter;
 import com.sena.caprendizaje.empleabilidad.model.dto.PostulacionModel;
@@ -16,7 +16,7 @@ import com.sena.caprendizaje.empleabilidad.persistence.repository.port.Postulaci
 
 import lombok.RequiredArgsConstructor;
 
-@Service
+@Repository
 @RequiredArgsConstructor
 public class PostulacionesRepositoryAdapter implements PostulacionesRepository {
 
