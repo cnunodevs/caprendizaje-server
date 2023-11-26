@@ -36,7 +36,7 @@ public class ArchivosController implements ResponseManager {
         return ResponseEntity.status(HttpStatus.OK).body(success(model, Message.Success.SUCCESS)); 
     }
 
-    @GetMapping("")
+    @GetMapping
     public ResponseEntity<StandardResponse> handleGetSignerUrl(@RequestBody Long idFile) throws IOException {
         return ResponseEntity.status(HttpStatus.OK).body(success(service.handleGetSignerUrl(idFile), "signed url"));
     }

@@ -67,4 +67,11 @@ public class UsuarioServiceAdapter implements UsuarioServiceProvider {
         return false;
     }
 
+
+    @Override
+    public Optional<Usuario> handleFindByUsuario(String usuario) {
+        return usuariosRepository.findFirstByUsuario(usuario);
+    }
+
+
 }
